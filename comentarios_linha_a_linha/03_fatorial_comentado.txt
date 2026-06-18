@@ -1,0 +1,48 @@
+# 03_fatorial.txt
+# Entrada: A = n.
+# Saída: A = n!. B, C e D ficam zerados.
+# Ideia: B começa com 1. C recebe n. Enquanto C > 0, calcula B := B*C usando A como produto temporário e D para preservar C; depois decrementa C.
+
+0001. ZER B - início: zerar B
+0002. SUB B - zera B: decrementa até zero
+0003. ZER A - volta para testar B
+0004. ADD B - B=1
+0005. ZER C - início: zerar C
+0006. SUB C - zera C: decrementa até zero
+0007. ZER A - volta para testar C
+0008. ZER A - enquanto A != 0, move para C
+0009. SUB A - move A->C: tira 1 de A
+0010. ADD C - move A->C: soma 1 em C
+0011. ZER A - volta para testar A
+0012. ZER C - enquanto contador C != 0
+0013. ZER A - início: zerar A
+0014. SUB A - zera A: decrementa até zero
+0015. ZER A - volta para testar A
+0016. ZER B - multiplica resultado B pelo contador C
+0017. SUB B - consome 1 do resultado anterior
+0018. ZER D - início: zerar D
+0019. SUB D - zera D: decrementa até zero
+0020. ZER A - volta para testar D
+0021. ZER C - adiciona C em A preservando C
+0022. SUB C - soma preservando: tira 1 de C
+0023. ADD A - soma preservando: soma 1 em A
+0024. ADD D - soma preservando: guarda em D
+0025. ZER A - volta para testar C
+0026. ZER D - enquanto D != 0, move para C
+0027. SUB D - move D->C: tira 1 de D
+0028. ADD C - move D->C: soma 1 em C
+0029. ZER A - volta para testar D
+0030. ZER A - volta para testar B
+0031. ZER A - enquanto A != 0, move para B
+0032. SUB A - move A->B: tira 1 de A
+0033. ADD B - move A->B: soma 1 em B
+0034. ZER A - volta para testar A
+0035. SUB C - decrementa contador C
+0036. ZER A - volta para testar C
+0037. ZER A - início: zerar A
+0038. SUB A - zera A: decrementa até zero
+0039. ZER A - volta para testar A
+0040. ZER B - enquanto B != 0, move para A
+0041. SUB B - move B->A: tira 1 de B
+0042. ADD A - move B->A: soma 1 em A
+0043. ZER A - volta para testar B

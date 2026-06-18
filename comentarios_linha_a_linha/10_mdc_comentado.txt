@@ -1,0 +1,140 @@
+# 10_mdc.txt
+# Entrada: A e B.
+# Saída: C = mdc(A,B). A e B podem ser alterados.
+# Ideia: algoritmo de Euclides. Enquanto B != 0, calcula D = A mod B, depois faz A := B e B := D. Quando B=0, move A para C.
+
+0001. ZER C - início: zerar C
+0002. SUB C - zera C: decrementa até zero
+0003. ZER A - volta para testar C
+0004. ZER D - início: zerar D
+0005. SUB D - zera D: decrementa até zero
+0006. ZER A - volta para testar D
+0007. ZER B - se B=0, acabou
+0008. ZER D - início: zerar D
+0009. SUB D - zera D: decrementa até zero
+0010. ZER A - volta para testar D
+0011. ZER E - início: zerar E
+0012. SUB E - zera E: decrementa até zero
+0013. ZER A - volta para testar E
+0014. ZER A - copia A para D preservando A
+0015. SUB A - copia A: tira 1 temporariamente
+0016. ADD D - copia A: soma 1 em D
+0017. ADD E - copia A: guarda 1 em E para restaurar
+0018. ZER A - volta para testar A
+0019. ZER E - enquanto E != 0, move para A
+0020. SUB E - move E->A: tira 1 de E
+0021. ADD A - move E->A: soma 1 em A
+0022. ZER A - volta para testar E
+0023. ZER E - início: zerar E
+0024. SUB E - zera E: decrementa até zero
+0025. ZER A - volta para testar E
+0026. ZER F - início: zerar F
+0027. SUB F - zera F: decrementa até zero
+0028. ZER A - volta para testar F
+0029. ZER E - início: zerar E
+0030. SUB E - zera E: decrementa até zero
+0031. ZER A - volta para testar E
+0032. ZER D - copia D para F preservando D
+0033. SUB D - copia D: tira 1 temporariamente
+0034. ADD F - copia D: soma 1 em F
+0035. ADD E - copia D: guarda 1 em E para restaurar
+0036. ZER A - volta para testar D
+0037. ZER E - enquanto E != 0, move para D
+0038. SUB E - move E->D: tira 1 de E
+0039. ADD D - move E->D: soma 1 em D
+0040. ZER A - volta para testar E
+0041. ZER G - início: zerar G
+0042. SUB G - zera G: decrementa até zero
+0043. ZER A - volta para testar G
+0044. ZER E - início: zerar E
+0045. SUB E - zera E: decrementa até zero
+0046. ZER A - volta para testar E
+0047. ZER B - copia B para G preservando B
+0048. SUB B - copia B: tira 1 temporariamente
+0049. ADD G - copia B: soma 1 em G
+0050. ADD E - copia B: guarda 1 em E para restaurar
+0051. ZER A - volta para testar B
+0052. ZER E - enquanto E != 0, move para B
+0053. SUB E - move E->B: tira 1 de E
+0054. ADD B - move E->B: soma 1 em B
+0055. ZER A - volta para testar E
+0056. ZER E - início: zerar E
+0057. SUB E - zera E: decrementa até zero
+0058. ZER A - volta para testar E
+0059. ZER F - compara D<B: se cópia de D zerou, verificar B
+0060. ZER G - se cópia de B zerou antes, então não é menor
+0061. SUB F - remove 1 das duas cópias
+0062. SUB G - remove 1 das duas cópias e volta
+0063. ZER G - se D acabou e B ainda tem valor, então D<B
+0064. ZER A - se y acabou primeiro, falso
+0065. ZER E - início: zerar E
+0066. SUB E - zera E: decrementa até zero
+0067. ZER A - volta para testar E
+0068. ADD E - marca verdadeiro: E=1
+0069. ZER E - início: zerar E
+0070. SUB E - zera E: decrementa até zero
+0071. ZER A - volta para testar E
+0072. ZER A - marca falso: E=0
+0073. ZER F - início: zerar F
+0074. SUB F - zera F: decrementa até zero
+0075. ZER A - volta para testar F
+0076. ZER G - início: zerar G
+0077. SUB G - zera G: decrementa até zero
+0078. ZER A - volta para testar G
+0079. ZER E - se D<B, resto final; senão continua subtraindo
+0080. ZER F - início: zerar F
+0081. SUB F - zera F: decrementa até zero
+0082. ZER A - volta para testar F
+0083. ZER B - enquanto B != 0, subtrai de D preservando B
+0084. SUB B - subtrai B de D: tira 1 do divisor/cópia
+0085. SUB D - subtrai 1 de D
+0086. ADD F - guarda 1 em F para restaurar B
+0087. ZER A - volta para testar B
+0088. ZER F - enquanto F != 0, move para B
+0089. SUB F - move F->B: tira 1 de F
+0090. ADD B - move F->B: soma 1 em B
+0091. ZER A - volta para testar F
+0092. ZER A - repete divisão por subtrações
+0093. ZER E - início: zerar E
+0094. SUB E - zera E: decrementa até zero
+0095. ZER A - volta para testar E
+0096. ZER F - início: zerar F
+0097. SUB F - zera F: decrementa até zero
+0098. ZER A - volta para testar F
+0099. ZER G - início: zerar G
+0100. SUB G - zera G: decrementa até zero
+0101. ZER A - volta para testar G
+0102. ZER H - início: zerar H
+0103. SUB H - zera H: decrementa até zero
+0104. ZER A - volta para testar H
+0105. ZER A - início: zerar A
+0106. SUB A - zera A: decrementa até zero
+0107. ZER A - volta para testar A
+0108. ZER B - enquanto B != 0, move para A
+0109. SUB B - move B->A: tira 1 de B
+0110. ADD A - move B->A: soma 1 em A
+0111. ZER A - volta para testar B
+0112. ZER D - enquanto D != 0, move para B
+0113. SUB D - move D->B: tira 1 de D
+0114. ADD B - move D->B: soma 1 em B
+0115. ZER A - volta para testar D
+0116. ZER A - repete Euclides
+0117. ZER A - enquanto A != 0, move para C
+0118. SUB A - move A->C: tira 1 de A
+0119. ADD C - move A->C: soma 1 em C
+0120. ZER A - volta para testar A
+0121. ZER D - início: zerar D
+0122. SUB D - zera D: decrementa até zero
+0123. ZER A - volta para testar D
+0124. ZER E - início: zerar E
+0125. SUB E - zera E: decrementa até zero
+0126. ZER A - volta para testar E
+0127. ZER F - início: zerar F
+0128. SUB F - zera F: decrementa até zero
+0129. ZER A - volta para testar F
+0130. ZER G - início: zerar G
+0131. SUB G - zera G: decrementa até zero
+0132. ZER A - volta para testar G
+0133. ZER H - início: zerar H
+0134. SUB H - zera H: decrementa até zero
+0135. ZER A - volta para testar H

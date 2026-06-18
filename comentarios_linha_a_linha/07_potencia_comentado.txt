@@ -1,0 +1,61 @@
+# 07_potencia.txt
+# Entrada: A = base e B = expoente.
+# Saída: C = A^B. A e B são preservados. D, E e F ficam zerados.
+# Ideia: C começa em 1. Copia B para D. Enquanto D > 0, faz C := C*A e decrementa D.
+
+0001. ZER C - início: zerar C
+0002. SUB C - zera C: decrementa até zero
+0003. ZER A - volta para testar C
+0004. ADD C - inicializa C com 1, pois qualquer número elevado a 0 começa com resultado 1
+0005. ZER D - início: zerar D
+0006. SUB D - zera D: decrementa até zero
+0007. ZER A - volta para testar D
+0008. ZER E - início: zerar E
+0009. SUB E - zera E: decrementa até zero
+0010. ZER A - volta para testar E
+0011. ZER B - copia B para D preservando B
+0012. SUB B - copia B: tira 1 temporariamente
+0013. ADD D - copia B: soma 1 em D
+0014. ADD E - copia B: guarda 1 em E para restaurar
+0015. ZER A - volta para testar B
+0016. ZER E - enquanto E != 0, move para B
+0017. SUB E - move E->B: tira 1 de E
+0018. ADD B - move E->B: soma 1 em B
+0019. ZER A - volta para testar E
+0020. ZER D - se D=0 encerra a repetição; senão faz mais uma multiplicação
+0021. SUB D - decrementa expoente auxiliar
+0022. ZER E - início: zerar E
+0023. SUB E - zera E: decrementa até zero
+0024. ZER A - volta para testar E
+0025. ZER F - início: zerar F
+0026. SUB F - zera F: decrementa até zero
+0027. ZER A - volta para testar F
+0028. ZER C - para cada unidade de C, soma A em E
+0029. SUB C - multiplica: consome 1 de C
+0030. ZER F - início: zerar F
+0031. SUB F - zera F: decrementa até zero
+0032. ZER A - volta para testar F
+0033. ZER A - adiciona A em E preservando A
+0034. SUB A - soma preservando: tira 1 de A
+0035. ADD E - soma preservando: soma 1 em E
+0036. ADD F - soma preservando: guarda 1 em F para restaurar A
+0037. ZER A - volta para testar A
+0038. ZER F - enquanto F != 0, move para A
+0039. SUB F - move F->A: tira 1 de F
+0040. ADD A - move F->A: soma 1 em A
+0041. ZER A - volta para testar F
+0042. ZER A - volta para testar C
+0043. ZER E - enquanto E != 0, move para C
+0044. SUB E - move E->C: tira 1 de E
+0045. ADD C - move E->C: soma 1 em C
+0046. ZER A - volta para testar E
+0047. ZER F - início: zerar F
+0048. SUB F - zera F: decrementa até zero
+0049. ZER A - volta para testar F
+0050. ZER A - volta para testar D
+0051. ZER E - início: zerar E
+0052. SUB E - zera E: decrementa até zero
+0053. ZER A - volta para testar E
+0054. ZER F - início: zerar F
+0055. SUB F - zera F: decrementa até zero
+0056. ZER A - volta para testar F

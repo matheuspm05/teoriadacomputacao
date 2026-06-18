@@ -1,0 +1,61 @@
+# 04_menor.txt
+# Entrada: A e B.
+# Saída: C = 1 se A < B, C = 0 caso contrário. A e B são preservados. D e E ficam zerados.
+# Ideia: compara cópias de A e B, retirando uma unidade das duas até uma acabar.
+
+0001. ZER C - início: zerar C
+0002. SUB C - zera C: decrementa até zero
+0003. ZER A - volta para testar C
+0004. ZER D - início: zerar D
+0005. SUB D - zera D: decrementa até zero
+0006. ZER A - volta para testar D
+0007. ZER C - início: zerar C
+0008. SUB C - zera C: decrementa até zero
+0009. ZER A - volta para testar C
+0010. ZER A - copia A para D preservando A
+0011. SUB A - copia A: tira 1 temporariamente
+0012. ADD D - copia A: soma 1 em D
+0013. ADD C - copia A: guarda 1 em C para restaurar
+0014. ZER A - volta para testar A
+0015. ZER C - enquanto C != 0, move para A
+0016. SUB C - move C->A: tira 1 de C
+0017. ADD A - move C->A: soma 1 em A
+0018. ZER A - volta para testar C
+0019. ZER E - início: zerar E
+0020. SUB E - zera E: decrementa até zero
+0021. ZER A - volta para testar E
+0022. ZER C - início: zerar C
+0023. SUB C - zera C: decrementa até zero
+0024. ZER A - volta para testar C
+0025. ZER B - copia B para E preservando B
+0026. SUB B - copia B: tira 1 temporariamente
+0027. ADD E - copia B: soma 1 em E
+0028. ADD C - copia B: guarda 1 em C para restaurar
+0029. ZER A - volta para testar B
+0030. ZER C - enquanto C != 0, move para B
+0031. SUB C - move C->B: tira 1 de C
+0032. ADD B - move C->B: soma 1 em B
+0033. ZER A - volta para testar C
+0034. ZER C - início: zerar C
+0035. SUB C - zera C: decrementa até zero
+0036. ZER A - volta para testar C
+0037. ZER D - compara A<B: se cópia de A zerou, verificar B
+0038. ZER E - se cópia de B zerou antes, então não é menor
+0039. SUB D - remove 1 das duas cópias
+0040. SUB E - remove 1 das duas cópias e volta
+0041. ZER E - se A acabou e B ainda tem valor, então A<B
+0042. ZER A - se y acabou primeiro, falso
+0043. ZER C - início: zerar C
+0044. SUB C - zera C: decrementa até zero
+0045. ZER A - volta para testar C
+0046. ADD C - marca verdadeiro: C=1
+0047. ZER C - início: zerar C
+0048. SUB C - zera C: decrementa até zero
+0049. ZER A - volta para testar C
+0050. ZER A - marca falso: C=0
+0051. ZER D - início: zerar D
+0052. SUB D - zera D: decrementa até zero
+0053. ZER A - volta para testar D
+0054. ZER E - início: zerar E
+0055. SUB E - zera E: decrementa até zero
+0056. ZER A - volta para testar E

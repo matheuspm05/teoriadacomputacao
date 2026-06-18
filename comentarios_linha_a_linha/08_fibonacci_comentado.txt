@@ -1,0 +1,85 @@
+# 08_fibonacci.txt
+# Entrada: A = n.
+# Saída: B = fib(n). Considera fib(0)=0 e fib(1)=1.
+# Ideia: usa B como anterior, C como atual e D como próximo. Para n=0 retorna 0; para n=1 retorna 1; para n>1 atualiza iterativamente.
+
+0001. ZER B - início: zerar B
+0002. SUB B - zera B: decrementa até zero
+0003. ZER A - volta para testar B
+0004. ZER C - início: zerar C
+0005. SUB C - zera C: decrementa até zero
+0006. ZER A - volta para testar C
+0007. ZER D - início: zerar D
+0008. SUB D - zera D: decrementa até zero
+0009. ZER A - volta para testar D
+0010. ZER E - início: zerar E
+0011. SUB E - zera E: decrementa até zero
+0012. ZER A - volta para testar E
+0013. ZER A - se n=0, B já é 0 e encerra
+0014. SUB A - decrementa A para testar o caso n=1
+0015. ZER A - se A zerou, então n era 1; senão continua para n>1
+0016. ADD B - caso n=1, define B=1 e encerra
+0017. ZER B - início: zerar B
+0018. SUB B - zera B: decrementa até zero
+0019. ZER A - volta para testar B
+0020. ZER C - início: zerar C
+0021. SUB C - zera C: decrementa até zero
+0022. ZER A - volta para testar C
+0023. ADD C - inicializa C=1, representando o valor atual fib(1)
+0024. ZER A - se contador acabou, copia C para B; senão continua o laço
+0025. ZER D - início: zerar D
+0026. SUB D - zera D: decrementa até zero
+0027. ZER A - volta para testar D
+0028. ZER E - início: zerar E
+0029. SUB E - zera E: decrementa até zero
+0030. ZER A - volta para testar E
+0031. ZER B - adiciona B em D preservando B
+0032. SUB B - soma preservando: tira 1 de B
+0033. ADD D - soma preservando: soma 1 em D
+0034. ADD E - soma preservando: guarda em E
+0035. ZER A - volta para testar B
+0036. ZER E - enquanto E != 0, move para B
+0037. SUB E - move E->B: tira 1 de E
+0038. ADD B - move E->B: soma 1 em B
+0039. ZER A - volta para testar E
+0040. ZER E - início: zerar E
+0041. SUB E - zera E: decrementa até zero
+0042. ZER A - volta para testar E
+0043. ZER C - adiciona C em D preservando C
+0044. SUB C - soma preservando: tira 1 de C
+0045. ADD D - soma preservando: soma 1 em D
+0046. ADD E - soma preservando: guarda em E
+0047. ZER A - volta para testar C
+0048. ZER E - enquanto E != 0, move para C
+0049. SUB E - move E->C: tira 1 de E
+0050. ADD C - move E->C: soma 1 em C
+0051. ZER A - volta para testar E
+0052. ZER B - início: zerar B
+0053. SUB B - zera B: decrementa até zero
+0054. ZER A - volta para testar B
+0055. ZER C - enquanto C != 0, move para B
+0056. SUB C - move C->B: tira 1 de C
+0057. ADD B - move C->B: soma 1 em B
+0058. ZER A - volta para testar C
+0059. ZER D - enquanto D != 0, move para C
+0060. SUB D - move D->C: tira 1 de D
+0061. ADD C - move D->C: soma 1 em C
+0062. ZER A - volta para testar D
+0063. SUB A - decrementa contador restante
+0064. ZER A - volta para testar A
+0065. ZER B - início: zerar B
+0066. SUB B - zera B: decrementa até zero
+0067. ZER A - volta para testar B
+0068. ZER C - enquanto C != 0, move para B
+0069. SUB C - move C->B: tira 1 de C
+0070. ADD B - move C->B: soma 1 em B
+0071. ZER A - volta para testar C
+0072. ZER C - início: zerar C
+0073. SUB C - zera C: decrementa até zero
+0074. ZER A - volta para testar C
+0075. ZER D - início: zerar D
+0076. SUB D - zera D: decrementa até zero
+0077. ZER A - volta para testar D
+0078. ZER E - início: zerar E
+0079. SUB E - zera E: decrementa até zero
+0080. ZER A - volta para testar E

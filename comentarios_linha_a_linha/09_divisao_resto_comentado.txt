@@ -1,0 +1,94 @@
+# 09_divisao_resto.txt
+# Entrada: A = dividendo e B = divisor, com B > 0.
+# Saída: C = quociente e D = resto. B é preservado; A termina zerado.
+# Ideia: move A para D. Enquanto D >= B, subtrai B de D preservando B e incrementa C.
+
+0001. ZER C - início: zerar C
+0002. SUB C - zera C: decrementa até zero
+0003. ZER A - volta para testar C
+0004. ZER D - início: zerar D
+0005. SUB D - zera D: decrementa até zero
+0006. ZER A - volta para testar D
+0007. ZER A - enquanto A != 0, move para D
+0008. SUB A - move A->D: tira 1 de A
+0009. ADD D - move A->D: soma 1 em D
+0010. ZER A - volta para testar A
+0011. ZER E - início: zerar E
+0012. SUB E - zera E: decrementa até zero
+0013. ZER A - volta para testar E
+0014. ZER F - início: zerar F
+0015. SUB F - zera F: decrementa até zero
+0016. ZER A - volta para testar F
+0017. ZER E - início: zerar E
+0018. SUB E - zera E: decrementa até zero
+0019. ZER A - volta para testar E
+0020. ZER D - copia D para F preservando D
+0021. SUB D - copia D: tira 1 temporariamente
+0022. ADD F - copia D: soma 1 em F
+0023. ADD E - copia D: guarda 1 em E para restaurar
+0024. ZER A - volta para testar D
+0025. ZER E - enquanto E != 0, move para D
+0026. SUB E - move E->D: tira 1 de E
+0027. ADD D - move E->D: soma 1 em D
+0028. ZER A - volta para testar E
+0029. ZER G - início: zerar G
+0030. SUB G - zera G: decrementa até zero
+0031. ZER A - volta para testar G
+0032. ZER E - início: zerar E
+0033. SUB E - zera E: decrementa até zero
+0034. ZER A - volta para testar E
+0035. ZER B - copia B para G preservando B
+0036. SUB B - copia B: tira 1 temporariamente
+0037. ADD G - copia B: soma 1 em G
+0038. ADD E - copia B: guarda 1 em E para restaurar
+0039. ZER A - volta para testar B
+0040. ZER E - enquanto E != 0, move para B
+0041. SUB E - move E->B: tira 1 de E
+0042. ADD B - move E->B: soma 1 em B
+0043. ZER A - volta para testar E
+0044. ZER E - início: zerar E
+0045. SUB E - zera E: decrementa até zero
+0046. ZER A - volta para testar E
+0047. ZER F - compara D<B: se cópia de D zerou, verificar B
+0048. ZER G - se cópia de B zerou antes, então não é menor
+0049. SUB F - remove 1 das duas cópias
+0050. SUB G - remove 1 das duas cópias e volta
+0051. ZER G - se D acabou e B ainda tem valor, então D<B
+0052. ZER A - se y acabou primeiro, falso
+0053. ZER E - início: zerar E
+0054. SUB E - zera E: decrementa até zero
+0055. ZER A - volta para testar E
+0056. ADD E - marca verdadeiro: E=1
+0057. ZER E - início: zerar E
+0058. SUB E - zera E: decrementa até zero
+0059. ZER A - volta para testar E
+0060. ZER A - marca falso: E=0
+0061. ZER F - início: zerar F
+0062. SUB F - zera F: decrementa até zero
+0063. ZER A - volta para testar F
+0064. ZER G - início: zerar G
+0065. SUB G - zera G: decrementa até zero
+0066. ZER A - volta para testar G
+0067. ZER E - se D<B, termina; senão subtrai divisor
+0068. ZER F - início: zerar F
+0069. SUB F - zera F: decrementa até zero
+0070. ZER A - volta para testar F
+0071. ZER B - enquanto B != 0, subtrai de D preservando B
+0072. SUB B - subtrai B de D: tira 1 do divisor/cópia
+0073. SUB D - subtrai 1 de D
+0074. ADD F - guarda 1 em F para restaurar B
+0075. ZER A - volta para testar B
+0076. ZER F - enquanto F != 0, move para B
+0077. SUB F - move F->B: tira 1 de F
+0078. ADD B - move F->B: soma 1 em B
+0079. ZER A - volta para testar F
+0080. ADD C - incrementa quociente
+0081. ZER E - início: zerar E
+0082. SUB E - zera E: decrementa até zero
+0083. ZER A - volta para testar E
+0084. ZER F - início: zerar F
+0085. SUB F - zera F: decrementa até zero
+0086. ZER A - volta para testar F
+0087. ZER G - início: zerar G
+0088. SUB G - zera G: decrementa até zero
+0089. ZER A - volta para testar G

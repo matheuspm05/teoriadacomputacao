@@ -1,0 +1,16 @@
+# 01_soma.txt
+# Entrada: A e B.
+# Saída: C = A + B. A e B terminam zerados.
+# Ideia: zera C, move A para C e depois move B para C.
+
+0001. ZER C - início: zerar C
+0002. SUB C - zera C: decrementa até zero
+0003. ZER A - volta para testar C
+0004. ZER A - enquanto A != 0, move para C
+0005. SUB A - move A->C: tira 1 de A
+0006. ADD C - move A->C: soma 1 em C
+0007. ZER A - volta para testar A
+0008. ZER B - enquanto B != 0, move para C
+0009. SUB B - move B->C: tira 1 de B
+0010. ADD C - move B->C: soma 1 em C
+0011. ZER A - volta para testar B

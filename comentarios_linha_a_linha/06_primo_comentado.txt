@@ -1,0 +1,265 @@
+# 06_primo.txt
+# Entrada: A.
+# Saída: B = 1 se A é primo, B = 0 caso contrário. A é preservado.
+# Ideia: números menores que 2 não são primos. Depois testa divisores C = 2,3,...
+# enquanto C < A. Se A mod C = 0, não é primo.
+
+0001. ZER B - início: zerar B
+0002. SUB B - zera B: decrementa até zero
+0003. ZER A - volta para testar B
+0004. ZER C - início: zerar C
+0005. SUB C - zera C: decrementa até zero
+0006. ZER A - volta para testar C
+0007. ADD C - define C=1 para começar a montar o divisor inicial
+0008. ADD C - define C=2, primeiro divisor a ser testado
+0009. ZER D - início: zerar D
+0010. SUB D - zera D: decrementa até zero
+0011. ZER A - volta para testar D
+0012. ZER E - início: zerar E
+0013. SUB E - zera E: decrementa até zero
+0014. ZER A - volta para testar E
+0015. ZER D - início: zerar D
+0016. SUB D - zera D: decrementa até zero
+0017. ZER A - volta para testar D
+0018. ZER A - copia A para E preservando A
+0019. SUB A - copia A: tira 1 temporariamente
+0020. ADD E - copia A: soma 1 em E
+0021. ADD D - copia A: guarda 1 em D para restaurar
+0022. ZER A - volta para testar A
+0023. ZER D - enquanto D != 0, move para A
+0024. SUB D - move D->A: tira 1 de D
+0025. ADD A - move D->A: soma 1 em A
+0026. ZER A - volta para testar D
+0027. ZER F - início: zerar F
+0028. SUB F - zera F: decrementa até zero
+0029. ZER A - volta para testar F
+0030. ZER D - início: zerar D
+0031. SUB D - zera D: decrementa até zero
+0032. ZER A - volta para testar D
+0033. ZER C - copia C para F preservando C
+0034. SUB C - copia C: tira 1 temporariamente
+0035. ADD F - copia C: soma 1 em F
+0036. ADD D - copia C: guarda 1 em D para restaurar
+0037. ZER A - volta para testar C
+0038. ZER D - enquanto D != 0, move para C
+0039. SUB D - move D->C: tira 1 de D
+0040. ADD C - move D->C: soma 1 em C
+0041. ZER A - volta para testar D
+0042. ZER D - início: zerar D
+0043. SUB D - zera D: decrementa até zero
+0044. ZER A - volta para testar D
+0045. ZER E - compara A<C: se cópia de A zerou, verificar C
+0046. ZER F - se cópia de C zerou antes, então não é menor
+0047. SUB E - remove 1 das duas cópias
+0048. SUB F - remove 1 das duas cópias e volta
+0049. ZER F - se A acabou e C ainda tem valor, então A<C
+0050. ZER A - se y acabou primeiro, falso
+0051. ZER D - início: zerar D
+0052. SUB D - zera D: decrementa até zero
+0053. ZER A - volta para testar D
+0054. ADD D - marca verdadeiro: D=1
+0055. ZER D - início: zerar D
+0056. SUB D - zera D: decrementa até zero
+0057. ZER A - volta para testar D
+0058. ZER A - marca falso: D=0
+0059. ZER E - início: zerar E
+0060. SUB E - zera E: decrementa até zero
+0061. ZER A - volta para testar E
+0062. ZER F - início: zerar F
+0063. SUB F - zera F: decrementa até zero
+0064. ZER A - volta para testar F
+0065. ZER D - se A<2, não é primo
+0066. ADD B - assume primo: B=1
+0067. ZER D - início: zerar D
+0068. SUB D - zera D: decrementa até zero
+0069. ZER A - volta para testar D
+0070. ZER E - início: zerar E
+0071. SUB E - zera E: decrementa até zero
+0072. ZER A - volta para testar E
+0073. ZER D - início: zerar D
+0074. SUB D - zera D: decrementa até zero
+0075. ZER A - volta para testar D
+0076. ZER C - copia C para E preservando C
+0077. SUB C - copia C: tira 1 temporariamente
+0078. ADD E - copia C: soma 1 em E
+0079. ADD D - copia C: guarda 1 em D para restaurar
+0080. ZER A - volta para testar C
+0081. ZER D - enquanto D != 0, move para C
+0082. SUB D - move D->C: tira 1 de D
+0083. ADD C - move D->C: soma 1 em C
+0084. ZER A - volta para testar D
+0085. ZER F - início: zerar F
+0086. SUB F - zera F: decrementa até zero
+0087. ZER A - volta para testar F
+0088. ZER D - início: zerar D
+0089. SUB D - zera D: decrementa até zero
+0090. ZER A - volta para testar D
+0091. ZER A - copia A para F preservando A
+0092. SUB A - copia A: tira 1 temporariamente
+0093. ADD F - copia A: soma 1 em F
+0094. ADD D - copia A: guarda 1 em D para restaurar
+0095. ZER A - volta para testar A
+0096. ZER D - enquanto D != 0, move para A
+0097. SUB D - move D->A: tira 1 de D
+0098. ADD A - move D->A: soma 1 em A
+0099. ZER A - volta para testar D
+0100. ZER D - início: zerar D
+0101. SUB D - zera D: decrementa até zero
+0102. ZER A - volta para testar D
+0103. ZER E - compara C<A: se cópia de C zerou, verificar A
+0104. ZER F - se cópia de A zerou antes, então não é menor
+0105. SUB E - remove 1 das duas cópias
+0106. SUB F - remove 1 das duas cópias e volta
+0107. ZER F - se C acabou e A ainda tem valor, então C<A
+0108. ZER A - se y acabou primeiro, falso
+0109. ZER D - início: zerar D
+0110. SUB D - zera D: decrementa até zero
+0111. ZER A - volta para testar D
+0112. ADD D - marca verdadeiro: D=1
+0113. ZER D - início: zerar D
+0114. SUB D - zera D: decrementa até zero
+0115. ZER A - volta para testar D
+0116. ZER A - marca falso: D=0
+0117. ZER E - início: zerar E
+0118. SUB E - zera E: decrementa até zero
+0119. ZER A - volta para testar E
+0120. ZER F - início: zerar F
+0121. SUB F - zera F: decrementa até zero
+0122. ZER A - volta para testar F
+0123. ZER D - se C<A é falso, terminou: primo
+0124. ZER D - início: zerar D
+0125. SUB D - zera D: decrementa até zero
+0126. ZER A - volta para testar D
+0127. ZER E - início: zerar E
+0128. SUB E - zera E: decrementa até zero
+0129. ZER A - volta para testar E
+0130. ZER D - início: zerar D
+0131. SUB D - zera D: decrementa até zero
+0132. ZER A - volta para testar D
+0133. ZER A - copia A para E preservando A
+0134. SUB A - copia A: tira 1 temporariamente
+0135. ADD E - copia A: soma 1 em E
+0136. ADD D - copia A: guarda 1 em D para restaurar
+0137. ZER A - volta para testar A
+0138. ZER D - enquanto D != 0, move para A
+0139. SUB D - move D->A: tira 1 de D
+0140. ADD A - move D->A: soma 1 em A
+0141. ZER A - volta para testar D
+0142. ZER D - início: zerar D
+0143. SUB D - zera D: decrementa até zero
+0144. ZER A - volta para testar D
+0145. ZER F - início: zerar F
+0146. SUB F - zera F: decrementa até zero
+0147. ZER A - volta para testar F
+0148. ZER D - início: zerar D
+0149. SUB D - zera D: decrementa até zero
+0150. ZER A - volta para testar D
+0151. ZER E - copia E para F preservando E
+0152. SUB E - copia E: tira 1 temporariamente
+0153. ADD F - copia E: soma 1 em F
+0154. ADD D - copia E: guarda 1 em D para restaurar
+0155. ZER A - volta para testar E
+0156. ZER D - enquanto D != 0, move para E
+0157. SUB D - move D->E: tira 1 de D
+0158. ADD E - move D->E: soma 1 em E
+0159. ZER A - volta para testar D
+0160. ZER G - início: zerar G
+0161. SUB G - zera G: decrementa até zero
+0162. ZER A - volta para testar G
+0163. ZER D - início: zerar D
+0164. SUB D - zera D: decrementa até zero
+0165. ZER A - volta para testar D
+0166. ZER C - copia C para G preservando C
+0167. SUB C - copia C: tira 1 temporariamente
+0168. ADD G - copia C: soma 1 em G
+0169. ADD D - copia C: guarda 1 em D para restaurar
+0170. ZER A - volta para testar C
+0171. ZER D - enquanto D != 0, move para C
+0172. SUB D - move D->C: tira 1 de D
+0173. ADD C - move D->C: soma 1 em C
+0174. ZER A - volta para testar D
+0175. ZER D - início: zerar D
+0176. SUB D - zera D: decrementa até zero
+0177. ZER A - volta para testar D
+0178. ZER F - compara E<C: se cópia de E zerou, verificar C
+0179. ZER G - se cópia de C zerou antes, então não é menor
+0180. SUB F - remove 1 das duas cópias
+0181. SUB G - remove 1 das duas cópias e volta
+0182. ZER G - se E acabou e C ainda tem valor, então E<C
+0183. ZER A - se y acabou primeiro, falso
+0184. ZER D - início: zerar D
+0185. SUB D - zera D: decrementa até zero
+0186. ZER A - volta para testar D
+0187. ADD D - marca verdadeiro: D=1
+0188. ZER D - início: zerar D
+0189. SUB D - zera D: decrementa até zero
+0190. ZER A - volta para testar D
+0191. ZER A - marca falso: D=0
+0192. ZER F - início: zerar F
+0193. SUB F - zera F: decrementa até zero
+0194. ZER A - volta para testar F
+0195. ZER G - início: zerar G
+0196. SUB G - zera G: decrementa até zero
+0197. ZER A - volta para testar G
+0198. ZER D - se E<C, resto final; senão continua subtraindo
+0199. ZER F - início: zerar F
+0200. SUB F - zera F: decrementa até zero
+0201. ZER A - volta para testar F
+0202. ZER C - enquanto C != 0, subtrai de E preservando C
+0203. SUB C - subtrai C de E: tira 1 do divisor/cópia
+0204. SUB E - subtrai 1 de E
+0205. ADD F - guarda 1 em F para restaurar C
+0206. ZER A - volta para testar C
+0207. ZER F - enquanto F != 0, move para C
+0208. SUB F - move F->C: tira 1 de F
+0209. ADD C - move F->C: soma 1 em C
+0210. ZER A - volta para testar F
+0211. ZER A - repete divisão por subtrações
+0212. ZER D - início: zerar D
+0213. SUB D - zera D: decrementa até zero
+0214. ZER A - volta para testar D
+0215. ZER F - início: zerar F
+0216. SUB F - zera F: decrementa até zero
+0217. ZER A - volta para testar F
+0218. ZER G - início: zerar G
+0219. SUB G - zera G: decrementa até zero
+0220. ZER A - volta para testar G
+0221. ZER H - início: zerar H
+0222. SUB H - zera H: decrementa até zero
+0223. ZER A - volta para testar H
+0224. ZER E - testa se resto E é zero
+0225. ZER D - início: zerar D
+0226. SUB D - zera D: decrementa até zero
+0227. ZER A - volta para testar D
+0228. ADD D - resto zero: D=1
+0229. ZER D - início: zerar D
+0230. SUB D - zera D: decrementa até zero
+0231. ZER A - volta para testar D
+0232. ZER A - resto diferente de zero: D=0
+0233. ZER E - início: zerar E
+0234. SUB E - zera E: decrementa até zero
+0235. ZER A - volta para testar E
+0236. ZER D - se mod_zero=0, tenta próximo divisor; se 1, não primo
+0237. ZER B - início: zerar B
+0238. SUB B - zera B: decrementa até zero
+0239. ZER A - volta para testar B
+0240. ZER A - divisor encontrado: encerra com B=0
+0241. ADD C - C = C + 1
+0242. ZER C - início: zerar C
+0243. SUB C - zera C: decrementa até zero
+0244. ZER A - volta para testar C
+0245. ZER D - início: zerar D
+0246. SUB D - zera D: decrementa até zero
+0247. ZER A - volta para testar D
+0248. ZER E - início: zerar E
+0249. SUB E - zera E: decrementa até zero
+0250. ZER A - volta para testar E
+0251. ZER F - início: zerar F
+0252. SUB F - zera F: decrementa até zero
+0253. ZER A - volta para testar F
+0254. ZER G - início: zerar G
+0255. SUB G - zera G: decrementa até zero
+0256. ZER A - volta para testar G
+0257. ZER H - se H já estiver zero, vai para 260 e encerra; senão continua zerando H
+0258. SUB H - zera H: decrementa até zero
+0259. ZER A - volta para testar H

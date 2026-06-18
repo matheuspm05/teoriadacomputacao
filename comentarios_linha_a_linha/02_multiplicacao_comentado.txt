@@ -1,0 +1,30 @@
+# 02_multiplicacao.txt
+# Entrada: A e B.
+# Saída: A = A * B. B é restaurado. C e D terminam zerados.
+# Ideia: C acumula o produto. Para cada unidade de A, soma B em C preservando B com D. No fim move C para A.
+
+0001. ZER C - início: zerar C
+0002. SUB C - zera C: decrementa até zero
+0003. ZER A - volta para testar C
+0004. ZER D - início: zerar D
+0005. SUB D - zera D: decrementa até zero
+0006. ZER A - volta para testar D
+0007. ZER A - enquanto A != 0, soma B no produto C
+0008. SUB A - consome uma unidade de A
+0009. ZER D - início: zerar D
+0010. SUB D - zera D: decrementa até zero
+0011. ZER A - volta para testar D
+0012. ZER B - adiciona B em C preservando B
+0013. SUB B - soma preservando: tira 1 de B
+0014. ADD C - soma preservando: soma 1 em C
+0015. ADD D - soma preservando: guarda em D
+0016. ZER A - volta para testar B
+0017. ZER D - enquanto D != 0, move para B
+0018. SUB D - move D->B: tira 1 de D
+0019. ADD B - move D->B: soma 1 em B
+0020. ZER A - volta para testar D
+0021. ZER A - volta para testar A
+0022. ZER C - enquanto C != 0, move para A
+0023. SUB C - move C->A: tira 1 de C
+0024. ADD A - move C->A: soma 1 em A
+0025. ZER A - volta para testar C
